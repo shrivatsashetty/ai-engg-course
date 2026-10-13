@@ -3,7 +3,7 @@
 
 ## Create a Virtual Environment
 ```sh
-python -m venv .venv
+python3 -m venv .venv
 ```
 
 ## Activate the Virtual Environment
