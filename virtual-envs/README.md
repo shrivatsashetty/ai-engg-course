@@ -22,6 +22,14 @@ source .venv/bin/activate
 .\.venv\Scripts\Activate.ps1 
 ```
 
+## Deactivate Virtual Environment
+
+Use the below command in your terminal to deactivate the selected Python Virtual Environment.
+
+```sh
+deactivate
+```
+
 ## Install Packages
 ```sh
 # install an individual package
@@ -29,7 +37,10 @@ pip install requests
 
 # running pip as a python module.
 # Sometimes required to install the package in the current Python environment.
-python -m pip install -U arrow
+python -m pip install openai
+
+# Call the venv's pip explicitly
+.venv/bin/python -m pip install openai
 
 # install from a requirements file
 pip install -r requirements.txt
@@ -59,3 +70,25 @@ To dump every package currently installed in your active Python environment into
 pip freeze > requirements.txt
 ```
 You can also run the above command after installing a new package inside your python environment so that it's updated.
+
+## List Installed Packages
+Use the below command to list all the packages installed in the current Python Environment.
+
+```sh
+pip list
+```
+
+## Check Python Interpreter
+
+Use any of the below commands to check which Python interpreter is being used:
+
+```sh
+which python
+
+which pip
+
+python -c "import sys; print(sys.prefix)"
+
+ls -l .venv/bin/python
+```
+
